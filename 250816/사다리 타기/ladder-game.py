@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 edges = [tuple(map(int, input().split())) for _ in range(m)]
 
 # Please write your code here.
-adj = [[0] * n for _ in range(15)]
+adj = [[0] * n for _ in range(16)]
 
 for edge in edges:
     adj[edge[1] - 1][edge[0] - 1] = 1
@@ -14,7 +14,7 @@ def start():
     p = [i for i in range(n)]
     for i in range(4):
         tmp = i
-        for j in range(15):
+        for j in range(16):
             if adj[j][tmp]:
                 tmp += 1
             elif tmp > 0 and adj[j][tmp - 1]:
