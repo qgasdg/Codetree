@@ -7,12 +7,12 @@ adj = [[0] * n for _ in range(16)]
 for edge in edges:
     adj[edge[1] - 1][edge[0] - 1] = 1
 
-# for i in range(15):
+# for i in range(16):
 #     print(*adj[i])
 
 def start():
     p = [i for i in range(n)]
-    for i in range(4):
+    for i in range(n):
         tmp = i
         for j in range(16):
             if adj[j][tmp]:
